@@ -7,6 +7,7 @@ from torch.autograd import Variable
 from Caffe import layer_param
 from torch.nn.modules.utils import _pair
 import numpy as np
+import sys
 
 """
 How to support a new layer type:
@@ -55,6 +56,7 @@ class TransLog(object):
         :param inputs: is a list of input variables
         """
         self.add_blobs(inputs)
+
     def add_layer(self,name='layer'):
         if name in self.layers:
             return self.layers[name]
@@ -72,7 +74,7 @@ class TransLog(object):
         for blob in blobs:
             self._blobs_data.append(blob) # to block the memory address be rewrited
             blob_id=int(id(blob))
-            if name not in self.detail_blobs.keys():
+            if name not in self.detail_blobs.keys():    # maintain a token table
                 self.detail_blobs[name] =0
             self.detail_blobs[name] +=1           
             if with_num:
@@ -414,7 +416,7 @@ def _interpolate(raw, input,size=None, scale_factor=None, mode='nearest', align_
     return x
 
 
-#sigmid layer
+#sigmoid layer
 def _sigmoid(raw, input):
     # Applies the element-wise function:
     # 
@@ -780,9 +782,15 @@ def trans_net(net,input_var,name='TransferedPytorchModel'):
     log.cnet.net.input_dim.extend(input_var.size())
     global NET_INITTED
     NET_INITTED=True
+    print("====== torch ops name: ====== \n")
+    layerCount = 0
     for name,layer in net.named_modules():
+        print("==== put No.{}, name:{},\n layer:{}\n ==== in the dict! \n".format(layerCount, name, layer))
         layer_names[layer]=name
-    print("torch ops name:", layer_names)
+        layerCount += 1
+    # print("====== torch ops name: ====== \n", layer_names)
+    print("\n ====== layer name finished ====== \n")
+    sys.stdout.flush()
     out = net.forward(input_var)
     print('Transform Completed')
 
