@@ -1,7 +1,7 @@
 alexnet experiment 
 
 Starting Transform, This will take a while
-140518464334656:blob1 was added to blobs
+140110555013888:blob1 was added to blobs
 ====== torch ops name: ====== 
 
 ==== put No.0, name:,
@@ -154,70 +154,70 @@ Starting Transform, This will take a while
 features.0
 conv:  blob1
 conv1 was added to layers
-140518464335296:conv_blob1 was added to blobs
+140110393785600:conv_blob1 was added to blobs
 features.1
 relu1 was added to layers
-140518464335104:relu_blob1 was added to blobs
+140110393785664:relu_blob1 was added to blobs
 features.2
 max_pool1 was added to layers
-140518464372288:max_pool_blob1 was added to blobs
+140110393785152:max_pool_blob1 was added to blobs
 features.3
 conv:  max_pool_blob1
 conv2 was added to layers
-140518464371584:conv_blob2 was added to blobs
+140110393784704:conv_blob2 was added to blobs
 features.4
 relu2 was added to layers
-140518464372160:relu_blob2 was added to blobs
+140110393785088:relu_blob2 was added to blobs
 features.5
 max_pool2 was added to layers
-140518464371072:max_pool_blob2 was added to blobs
+140110393783488:max_pool_blob2 was added to blobs
 features.6
 conv:  max_pool_blob2
 conv3 was added to layers
-140518464370688:conv_blob3 was added to blobs
+140110393783104:conv_blob3 was added to blobs
 features.7
 relu3 was added to layers
-140518464371008:relu_blob3 was added to blobs
+140110393783424:relu_blob3 was added to blobs
 features.8
 conv:  relu_blob3
 conv4 was added to layers
-140518464370560:conv_blob4 was added to blobs
+140110393782976:conv_blob4 was added to blobs
 features.9
 relu4 was added to layers
-140518464370432:relu_blob4 was added to blobs
+140110393782848:relu_blob4 was added to blobs
 features.10
 conv:  relu_blob4
 conv5 was added to layers
-140518464369984:conv_blob5 was added to blobs
+140110393782784:conv_blob5 was added to blobs
 features.11
 relu5 was added to layers
-140518464369152:relu_blob5 was added to blobs
+140110393785536:relu_blob5 was added to blobs
 features.12
 max_pool3 was added to layers
-140518464369088:max_pool_blob3 was added to blobs
+140110393785728:max_pool_blob3 was added to blobs
 avgpool
 ave_pool1 was added to layers
-140518464368832:ave_pool_blob1 was added to blobs
+140110393786304:ave_pool_blob1 was added to blobs
 classifier.0
-WARNING: CANNOT FOUND blob 140518464372416
+WARNING: CANNOT FOUND blob 140110393795584
 dropout1 was added to layers
-140518464372224:None was added to blobs
+140110558940032:None was added to blobs
 classifier.1
 fc1 was added to layers
-140518464370176:fc_blob1 was added to blobs
+140110393795328:fc_blob1 was added to blobs
 classifier.2
 relu6 was added to layers
-140518464381632:relu_blob6 was added to blobs
+140111145725888:relu_blob6 was added to blobs
 classifier.3
 dropout2 was added to layers
-140518464381056:relu_blob6 was added to blobs
+140110393794624:relu_blob6 was added to blobs
 classifier.4
 fc2 was added to layers
-140518464380992:fc_blob2 was added to blobs
+140110393795008:fc_blob2 was added to blobs
 classifier.5
 relu7 was added to layers
-140518464381312:relu_blob7 was added to blobs
+140110393795264:relu_blob7 was added to blobs
 classifier.6
 fc3 was added to layers
-140518464381696:fc_blob3 was added to blobs
+140110393795648:fc_blob3 was added to blobs
 Transform Completed

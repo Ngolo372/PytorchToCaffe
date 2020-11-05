@@ -25,6 +25,7 @@ Please MUTE the inplace operations to avoid not find in graph
 
 # TODO: support the inplace output of the layers
 
+# class Blob_LOG:  a key-value dictionary for blobs
 class Blob_LOG():
     def __init__(self):
         self.data={}
@@ -93,7 +94,7 @@ class TransLog(object):
         try:
             return self._blobs[var]
         except:
-            print("WARNING: CANNOT FOUND blob {}".format(var))
+            print("[WARNING in blob]: CANNOT FOUND blob {}".format(var))
             return None
 
 log=TransLog()
